@@ -13,7 +13,7 @@ import com.cai.domain.User;
 @Repository
 public class UserDaoImpl  extends BaseDaoImpl<User> implements UserDao{
 //	@Resource(name="sessionFactory")
-//	SessionFactory sessionFactory;
+//	SessionFactory sessionFactory; 
 	
 
 	
