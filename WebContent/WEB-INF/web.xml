@@ -9,6 +9,14 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   
+  
+  <filter><!-- 避免hibernate 懒加载  出现nosession的问题  所以扩大session作用域 -->
+  	<filter-name>openSessionInView</filter-name>
+  	<filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+  
+  
+  
   <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
 	<servlet>
 		<servlet-name>springDispatcherServlet</servlet-name>
