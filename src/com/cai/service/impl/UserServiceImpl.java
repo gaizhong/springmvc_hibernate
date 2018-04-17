@@ -13,15 +13,15 @@ import com.cai.domain.User;
 import com.cai.service.UserService;
 @Service
 public class UserServiceImpl implements UserService{
-//	@Resource(name="userDao")
+	@Resource(name="userDao")
 	UserDao userDao;
 	@Override
 	public List<User> getPageList(DetachedCriteria dc, Integer start, Integer pageSize) {
 		return userDao.getPageList(dc, start, pageSize);
 	}
-	public void setUserDao(UserDao userDao) {
-		this.userDao = userDao;
-	}
+//	public void setUserDao(UserDao userDao) {
+//		this.userDao = userDao;
+//	}
 	
 
 }

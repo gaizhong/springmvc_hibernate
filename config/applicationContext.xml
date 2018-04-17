@@ -54,14 +54,16 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pc"/> 
 	</aop:config>
 
+
+
 		<!-- ########################################################################## -->
-	
+	<context:component-scan base-package="com/cai"></context:component-scan>
 	
 	<bean name="userDao" class="com.cai.dao.impl.UserDaoImpl" >
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<bean name="userService" class="com.cai.service.impl.UserServiceImpl">
-		<property name="userDao" ref="userDao"></property>
+		<!-- <property name="userDao" ref="userDao"></property> -->
 	</bean>
 	
 	

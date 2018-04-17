@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import com.cai.dao.BaseDao;
 
-@Repository
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 
 	private Class clazz;//用于接收运行期的泛型
